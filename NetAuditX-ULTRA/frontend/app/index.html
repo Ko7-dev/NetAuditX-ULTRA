@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NetAuditX ULTRA — AI Network Intelligence</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-orbs">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <aside class="sidebar glass">
+      <div class="brand">
+        <div class="brand-mark">N<span>x</span></div>
+        <div>
+          <div class="brand-title">NetAuditX</div>
+          <div class="brand-sub">ULTRA · v2.0</div>
+        </div>
+      </div>
+      <nav id="nav">
+        <a href="#/dashboard" data-route="dashboard"><span class="nav-ico">▤</span> Dashboard</a>
+        <a href="#/discovery" data-route="discovery"><span class="nav-ico">⌘</span> Discovery</a>
+        <a href="#/network_map" data-route="network_map"><span class="nav-ico">⊕</span> Network Map</a>
+        <a href="#/devices" data-route="devices"><span class="nav-ico">◉</span> Devices</a>
+        <a href="#/results" data-route="results"><span class="nav-ico">≣</span> Scan Results</a>
+        <a href="#/insights" data-route="insights"><span class="nav-ico">✦</span> AI Insights</a>
+        <a href="#/drift" data-route="drift"><span class="nav-ico">∆</span> Drift</a>
+        <a href="#/alerts" data-route="alerts"><span class="nav-ico">!</span> Alerts</a>
+        <a href="#/schedules" data-route="schedules"><span class="nav-ico">⟳</span> Schedules</a>
+        <a href="#/logs" data-route="logs"><span class="nav-ico">»</span> Live Logs</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="status-pill">
+          <span class="pulse"></span>
+          <span id="health-label">Connecting…</span>
+        </div>
+        <div class="muted small" id="last-refresh">—</div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar glass">
+        <div>
+          <h1 id="page-title">Dashboard</h1>
+          <p id="page-sub" class="muted">Real-time network health overview</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn ghost" id="btn-refresh">↻ Refresh</button>
+          <button class="btn primary" id="btn-scan-now">⚡ Scan Now</button>
+        </div>
+      </header>
+
+      <section id="view"></section>
+    </main>
+
+    <div id="toast-host"></div>
+
+    <script type="module" src="/components/api.js"></script>
+    <script type="module" src="/components/ui.js"></script>
+    <script type="module" src="/pages/dashboard.js"></script>
+    <script type="module" src="/pages/devices.js"></script>
+    <script type="module" src="/pages/results.js"></script>
+    <script type="module" src="/pages/insights.js"></script>
+    <script type="module" src="/pages/alerts.js"></script>
+    <script type="module" src="/pages/schedules.js"></script>
+    <script type="module" src="/pages/discovery.js"></script>
+    <script type="module" src="/pages/network_map.js"></script>
+    <script type="module" src="/pages/drift.js"></script>
+    <script type="module" src="/pages/logs.js"></script>
+    <script type="module" src="/app/app.js"></script>
+  </body>
+</html>

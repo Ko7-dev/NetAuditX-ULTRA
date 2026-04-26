@@ -1,0 +1,23 @@
+services:
+  netauditx:
+    build: .
+    container_name: netauditx
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: "5000"
+      # --- Optional configuration ---
+      # SSH_DEFAULT_USERNAME: admin
+      # SSH_DEFAULT_PASSWORD: ""
+      # SMTP_HOST: smtp.example.com
+      # SMTP_PORT: "587"
+      # SMTP_USERNAME: alerts@example.com
+      # SMTP_PASSWORD: secret
+      # ALERT_EMAIL_FROM: alerts@example.com
+      # ALERT_EMAIL_TO: ops@example.com
+      # ALERT_WEBHOOK_URL: https://hooks.example.com/netauditx
+      # OPENAI_API_KEY: sk-...
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
